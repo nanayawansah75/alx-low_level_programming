@@ -2,11 +2,17 @@
 #include <stdio.h>
 
 /**
-  * print_name - prints a name
-  * @name: input string
-  * @f: function pointer casted to char pointer
-  */
+ * print_name - Write a function that prints a name.
+ *
+ * @name: char pointer
+ *
+ * @f: pointer
+ *
+ * Return: void
+ */
+
 void print_name(char *name, void (*f)(char *))
 {
-	(*f)(name);
+	if (name && f)
+	f(name);
 }
